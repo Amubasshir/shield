@@ -34,5 +34,33 @@ cookieCloseBtn.addEventListener('click', () => {
 });
 
 // !------------Stick The Navbar--------------
+function sticky(entries) {
+  const entry = entries[0];
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+}
+
 const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+const headerObserver = new IntersectionObserver(sticky, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+
+// !reveal section
+function revealSection(entries, observer) {
+  const entry = entries[0];
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+}
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.2,
+});
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
