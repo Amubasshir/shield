@@ -93,3 +93,25 @@ navLinks.addEventListener('click', function (e) {
     document.querySelector(attr).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+// !toggle
+
+toggleBtn.addEventListener('click', function () {
+  if (navLinks.classList.contains('nav__open')) {
+    navLinks.classList.remove('nav__open');
+    document.querySelector('html').style.overflow = 'visible';
+  } else {
+    navLinks.classList.add('nav__open');
+    document.querySelector('html').style.overflow = 'hidden';
+  }
+});
+navLinks.addEventListener('click', function () {
+  navLinks.classList.contains('nav__open') &&
+    navLinks.classList.remove('nav__open');
+  document.querySelector('html').style.overflow = 'visible';
+});
+
+// !Learn more scroll
+btnScrollTo.addEventListener('click', function () {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
