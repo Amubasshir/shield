@@ -84,3 +84,12 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// !scroll behavior
+navLinks.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {
+    const attr = e.target.getAttribute('href');
+    document.querySelector(attr).scrollIntoView({ behavior: 'smooth' });
+  }
+});
