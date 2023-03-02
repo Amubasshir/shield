@@ -1,15 +1,15 @@
 :root {
-  --color-primary: #24cbc8;
-  --color-secondary: #ff768b;
-  --color-tertiary: #ff7a42;
-  --color-primary-darker: #139e9c;
-  --color-secondary-darker: #c94559;
-  --color-tertiary-darker: #d35e2c;
-  --color-primary-opacity: #24cbc856;
-  --color-secondary-opacity: #ff768b56;
-  --color-tertiary-opacity: #ff7b4256;
-  --gradient-primary: linear-gradient(to top left, #139e9c, #24cbc8);
-  --gradient-secondary: linear-gradient(to top left, #d35e2c, #ff7a42);
+  --color-primary: #7fbcd2;
+  --color-secondary: #a5f1e9;
+  --color-tertiary: #e8d5c4;
+  --color-primary-darker: #75bfda;
+  --color-secondary-darker: #9af6ed;
+  --color-tertiary-darker: #ebd0b9;
+  --color-primary-opacity: #8ec4d7;
+  --color-secondary-opacity: #b3f0ea;
+  --color-tertiary-opacity: #e7e2dd;
+  --gradient-primary: linear-gradient(to top left, #8ec4d7, #7fbcd2);
+  --gradient-secondary: linear-gradient(to top left, #b3f0ea, #a5f1e9);
 }
 
 ::-webkit-scrollbar {
@@ -17,11 +17,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(55, 56, 61);
+  background-color: black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #24cbc8;
+  background-color: rgb(55, 56, 61);
   height: 10%;
 }
 
@@ -281,7 +281,6 @@ h4 {
   z-index: -1;
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
-  background-image: var(--gradient-primary);
 }
 
 .features {
@@ -671,7 +670,7 @@ h4 {
 
 .modal__form input:focus {
   outline: none;
-  border-color: #24cbc8;
+  border-color: #7fbcd2;
 }
 
 .modal__form button {
@@ -774,7 +773,7 @@ h4 {
   }
 
   .nav__toggle:hover {
-    color: #24cbc8;
+    color: #7fbcd2;
   }
 
   .header__title {
